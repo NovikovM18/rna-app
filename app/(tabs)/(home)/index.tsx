@@ -14,7 +14,14 @@ const Home = () => {
     Toast.show({
       type: 'info',
       text1: 'Hello',
-      text2: 'This is some something 👋'
+      text2: 'This is some something 👋',
+      text1Style: {
+        fontSize: 20
+      },
+      text2Style: {
+        fontSize: 16,
+        color: 'gray'
+      },
     });
   }
 
@@ -25,10 +32,9 @@ const Home = () => {
 
         <View style={globalStyles.linkWrap}>
           <Link href="/details/details" style={globalStyles.link}>Go to details screen</Link>
-          <Link href="/details/123" style={globalStyles.link}>Go to details screen 123</Link>
-          <Link href="/details/5555" style={globalStyles.link}>Go to details screen 5555</Link>
           <Link href="/(settings)" style={globalStyles.link}>Go to Settings screen</Link>
           <Link href="/calendaring" style={globalStyles.link}>Go to Calendar</Link>
+          <Link href="/agending" style={globalStyles.link}>Go to Agenda</Link>
         </View>
 
         <Button title='click' onPress={btnPress}></Button>

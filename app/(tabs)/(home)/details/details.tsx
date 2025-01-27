@@ -11,15 +11,16 @@ const Details = () => {
 
       <View style={globalStyles.linkWrap}>
         <Link style={globalStyles.link} href="/">Go to home screen</Link>
-
         <Link
           style={globalStyles.link}
           href={{
             pathname: '/details/[id]',
             params: { id: 'bacon' },
           }}>
-          View user details
+          View user details 'bacon'
         </Link>
+        <Link href="/details/123" style={globalStyles.link}>Go to details screen 123</Link>
+        <Link href="/details/5555" style={globalStyles.link}>Go to details screen 5555</Link>
       </View>
     </View>
   )

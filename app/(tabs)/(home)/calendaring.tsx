@@ -8,11 +8,25 @@ const Calendaring = () => {
   return (
     <View>    
       <Calendar
-        onDayPress={(day: { dateString: React.SetStateAction<string>; }) => {
+        style={{
+          borderWidth: 1,
+          borderColor: 'gray',
+        }}
+        theme={{
+          backgroundColor: '#ffffff',
+          calendarBackground: '#ffffff',
+          textSectionTitleColor: '#b6c1cd',
+          selectedDayBackgroundColor: 'lightgreen',
+          selectedDayTextColor: 'yellow',
+          todayTextColor: 'lightgreen',
+          dayTextColor: '#2d4150',
+          textDisabledColor: '#dd99ee'
+        }}
+        onDayPress={(day: { dateString: React.SetStateAction<string> }) => {
           setSelected(day.dateString);
         }}
         markedDates={{
-          [selected]: {selected: true, disableTouchEvent: true, selectedDotColor: 'red'}
+          [selected]: {selected: true, disableTouchEvent: true, selectedDotColor: 'orange'}
         }}
       />
 

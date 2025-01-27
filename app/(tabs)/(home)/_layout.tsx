@@ -5,6 +5,7 @@ export default function HomeLayout() {
     <Stack>
       <Stack.Screen name="index" options={{headerShown: false}} />
       <Stack.Screen name="calendaring" />
+      <Stack.Screen name="agending" />
       <Stack.Screen name="details/details" />
       <Stack.Screen name="details/[id]" />
     </Stack>
